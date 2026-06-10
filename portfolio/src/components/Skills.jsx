@@ -5,7 +5,7 @@ function Skills() {
         <h2 className="section-title">Skills</h2>
 
         <div className="skills-grid">
-          <div className="skill-card">
+          <div className="skill-card" data-aos="zoom-in">
             <h3>Frontend</h3>
             <p>HTML, CSS, JavaScript, React, Vite</p>
           </div>

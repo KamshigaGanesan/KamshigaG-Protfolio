@@ -1,22 +1,44 @@
 function Contact() {
   return (
-    <section id="contact" className="section light-section">
+    <section id="contact" className="section">
       <div className="container">
+
         <h2 className="section-title">Contact</h2>
+
         <p className="section-text">
-          I am open to internship opportunities, collaborations, and learning
-          experiences in software engineering and web development.
+          I am open to internship opportunities, collaborations,
+          and software engineering projects.
         </p>
 
-        <div className="contact-links">
-          <a href="mailto:youremail@example.com">Email</a>
-          <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">
-            GitHub
+        <div className="contact-card">
+
+          <a
+            href="mailto:youremail@example.com"
+            className="contact-item"
+          >
+            📧 Email
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer">
-            LinkedIn
+
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noreferrer"
+            className="contact-item"
+          >
+            💻 GitHub
           </a>
+
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noreferrer"
+            className="contact-item"
+          >
+            🔗 LinkedIn
+          </a>
+
         </div>
+
       </div>
     </section>
   )

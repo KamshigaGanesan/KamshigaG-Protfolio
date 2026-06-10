@@ -8,7 +8,7 @@ function Projects() {
 
         <div className="projects-grid">
           {projects.map((project) => (
-            <div className="project-card" key={project.id}>
+            <div className="project-card" key={project.id} data-aos="fade-up">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
 
