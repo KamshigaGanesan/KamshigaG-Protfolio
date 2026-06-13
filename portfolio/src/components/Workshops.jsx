@@ -1,32 +1,34 @@
 function Workshops() {
   return (
-    <section className="section" id="workshops">
+    <section className="section" id="development">
       <div className="container">
 
         <h2 className="section-title">
-          Workshops & Activities
+          Professional Development
         </h2>
 
-        <div className="project-card">
+        <article className="project-card workshop-card" data-aos="fade-up">
 
           <img
             src="/workshop.jpeg"
-            alt="Workshop"
+            alt="Workshop group photo"
             className="workshop-image"
           />
 
-          <h3>
-            Guest Lecture: Leadership & Soft Skills Development
-          </h3>
+          <div className="project-card-body">
+            <p className="project-kicker">Leadership & Soft Skills Development Workshop</p>
+            <h3>
+              Guest Lecture: Leadership & Soft Skills Development
+            </h3>
 
-          <p>
-            Participated in the “Leadership and Soft Skills Development”
-            guest lecture conducted by Mrs. Kalavathy Sanjeewakumar,
-            gaining insights into communication, leadership,
-            and professional workplace skills.
-          </p>
+            <p>
+              Participated in the Leadership and Soft Skills Development guest lecture
+              conducted by Mrs. Kalavathy Sanjeewakumar, gaining insights into
+              communication, leadership, teamwork, and professional workplace skills.
+            </p>
+          </div>
 
-        </div>
+        </article>
 
       </div>
     </section>

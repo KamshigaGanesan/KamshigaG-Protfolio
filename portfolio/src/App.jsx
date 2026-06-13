@@ -9,12 +9,14 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Workshops from "./components/Workshops";
+import Footer from "./components/Footer";
 
 function App() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 800,
+      offset: 60,
       once: true,
     });
   }, []);
@@ -28,6 +30,7 @@ function App() {
       <Projects />
       <Workshops />
       <Contact/>
+      <Footer />
     </>
   )
 }
