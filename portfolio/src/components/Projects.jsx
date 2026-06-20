@@ -1,21 +1,29 @@
-import { FaArrowUpRightFromSquare, FaGithub } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 import projects from '../data/projects'
 
 function Projects() {
+  const featuredProjects = projects.slice(0, 4)
+
   return (
     <section id="projects" className="section">
       <div className="container">
-        <h2 className="section-title">Projects</h2>
+        <div className="section-heading">
+          <p className="project-kicker">Selected Work</p>
+          <h2 className="section-title">Featured Projects</h2>
+        </div>
 
         <div className="projects-grid">
-          {projects.map((project) => (
-            <article className="project-card" key={project.id} data-aos="fade-up">
+          {featuredProjects.map((project) => (
+            <article
+              className="project-card featured-project-card"
+              key={project.id}
+              data-aos="fade-up"
+            >
               <div className="project-image-wrap">
                 <img src={project.image} alt={`${project.title} screenshot`} className="project-image" />
               </div>
 
               <div className="project-card-body">
-                <p className="project-kicker">Project Screenshot</p>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
 
@@ -36,17 +44,6 @@ function Projects() {
                   >
                     <FaGithub /> GitHub
                   </a>
-
-                  {project.live && (
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="project-link project-link-secondary"
-                    >
-                      <FaArrowUpRightFromSquare /> Live Demo
-                    </a>
-                  )}
                 </div>
               </div>
 

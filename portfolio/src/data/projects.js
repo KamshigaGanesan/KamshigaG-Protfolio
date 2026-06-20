@@ -36,21 +36,45 @@ const createProjectPreview = (title, accent) => {
 const projects = [
   {
     id: 1,
-    title: 'Career Guidance and Education System',
+    title: 'Career Selection & Education Guidance System',
     description:
-      'A MERN-based web application designed to guide Sri Lankan students in selecting education and career pathways. My main contribution focused on the Qualification and Eligibility Analyzer feature.',
+      'A MERN stack web application developed to help Sri Lankan school leavers identify suitable education and career pathways. My contribution focused on developing recommendation features, pathway comparisons, and integrating frontend and backend services.',
     tech: ['React', 'Node.js', 'Express.js', 'MongoDB'],
-    github: 'https://github.com/yourusername/your-repo',
-    image: createProjectPreview('Career Guidance System', 'Eligibility Analyzer'),
+    github: 'https://github.com/KamshigaGanesan/A-Web-Based-Career-Selection-and-Education-Guidance-System',
+    image: "/projects/career-guidance.png",
   },
+
   {
     id: 2,
-    title: 'Campus Food API',
+    title: 'Human Resource Management System',
     description:
-      'A backend API project for managing student food ordering data using Express and MongoDB, with routes, models, and API testing through Postman.',
-    tech: ['Node.js', 'Express.js', 'MongoDB'],
-    github: 'https://github.com/yourusername/your-repo',
-    image: createProjectPreview('Campus Food API', 'Backend Services'),
+      'A backend Human Resource Management System built using Spring Boot and PostgreSQL. Features include employee management, RESTful APIs, CRUD operations, database integration, and API testing with Postman.',
+    tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Postman'],
+    github: 'https://github.com/KamshigaGanesan/hrm-system-springboot',
+    image: createProjectPreview('HRM System', 'Spring Boot'),
   },
-]
+
+  {
+    id: 3,
+    title: 'Smart Campus Mobile Application',
+    description:
+      'A React Native mobile application developed for university students. My contribution focused on the Lost & Found Management module with API integration, MongoDB connectivity, and frontend-backend communication.',
+    tech: ['React Native', 'Node.js', 'Express.js', 'MongoDB'],
+    github: 'https://github.com/KamshigaGanesan/Y2S2SmartUniMobileApp_WMT',
+    image: "/projects/smartUNI.png",
+  },
+
+  {
+    id: 4,
+    title: 'Jewellers Website',
+    description:
+      'A full-stack jewellery showcase platform developed for a local business. Includes product management, gold rate updates, Cloudinary image storage, responsive design, and MongoDB Atlas integration.',
+    tech: ['Next.js', 'React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
+    github: 'https://github.com/KamshigaGanesan/Jewellery_Management',
+    image: "/projects/jewellery.png",
+  },
+
+];
+
 export default projects
+
