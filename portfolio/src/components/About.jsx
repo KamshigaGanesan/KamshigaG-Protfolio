@@ -8,22 +8,21 @@ function About() {
           <div className="about-card">
             <p className="about-label">Focus</p>
             <p className="section-text">
-              I am a second-year Software Engineering undergraduate with a strong
-              interest in full-stack web development and product-minded software.
+              I am a second-year BSc (Hons) Information Technology undergraduate specializing in Software Engineering, with a strong
+              interest in full-stack development, backend APIs, and product-minded software.
             </p>
           </div>
 
           <div className="about-card">
             <p className="about-label">Goal</p>
             <p className="section-text">
-              I am currently sharpening my MERN stack, backend, and deployment skills
-              to prepare for internships and junior software engineering roles.
+              I am actively developing full-stack web applications and strengthening my software engineering skills to prepare for internship opportunities and a professional career in software development.
             </p>
           </div>
         </div>
       </div>
     </section>
-    
+
   )
 }
 

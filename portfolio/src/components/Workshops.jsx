@@ -1,29 +1,34 @@
-const workshopPhotos = [
-  {
-    src: '/professionalDevelopment/workshop.jpeg',
-    alt: 'Leadership and soft skills development workshop group photo',
-  },
-  {
-    src: '/professionalDevelopment/AIposter.jpeg',
-    alt: 'Academic poster presentation activity',
-  },
-  {
-    src: '/professionalDevelopment/Carrierguidence.jpeg',
-    alt: 'Career guidance and professional exposure session',
-  },
-  {
-    src: '/professionalDevelopment/IOT.png',
-    alt: 'Industry exposure and learning workshop',
-  },
-]
+import { FaUsers, FaLaptopCode } from "react-icons/fa";
 
-const skillsGained = [
-  'Leadership',
-  'Communication',
-  'Teamwork',
-  'Professional Development',
-  'Industry Exposure',
-]
+const activities = [
+  {
+    title: "Leadership & Soft Skills Workshop",
+    description:
+      "Participated in a professional development workshop focused on leadership, communication, teamwork, workplace readiness, and career growth.",
+    image: "/professionalDevelopment/workshop.jpeg",
+    icon: FaUsers,
+    tags: ["Leadership", "Communication", "Teamwork"],
+    detail: "Mrs. Kalavathy Sanjeewakumar - Asia Chartered Institute of Digital Marketing",
+  },
+  {
+    title: "ThinkAI Expo 2025 - Poster Presentation",
+    description:
+      "Presented an academic AI poster at ThinkAI Expo 2025, demonstrating interest in artificial intelligence research and technical communication.",
+    image: "/professionalDevelopment/AIposter.jpeg",
+    icon: FaLaptopCode,
+    tags: ["AI/ML", "Research", "Presentation"],
+    detail: "ThinkAI Expo 2025 Participant",
+  },
+  {
+    title: "Heart Rate Monitoring System - Project Presentation",
+    description:
+      "Presented an IoT-based Heart Rate Monitoring System for the Year 1 Fundamentals of Computing module, covering sensors, data flow, and real-time monitoring concepts.",
+    image: "/professionalDevelopment/IOT.png",
+    icon: FaLaptopCode,
+    tags: ["IoT", "Academic Project", "Presentation"],
+    detail: "Fundamentals of Computing - Year 1 Module Project",
+  },
+];
 
 function Workshops() {
   return (
@@ -32,51 +37,48 @@ function Workshops() {
         <div className="section-heading">
           <h2 className="section-title">Professional Development</h2>
           <p className="section-subtitle">
-            Workshops, industry exposure, and continuous learning.
+            Selected workshops, presentations, and learning activities that support my growth as a software engineering undergraduate.
           </p>
         </div>
 
-        <div className="development-wrapper" data-aos="fade-up">
-          <div className="development-info">
-            <div>
-              <p className="project-kicker">Workshop Highlight</p>
-              <h3>Leadership & Soft Skills Development Workshop</h3>
-              <p>
-                Participated in a professional development workshop focused on
-                leadership, communication, teamwork, workplace readiness, and
-                career growth.
-              </p>
-            </div>
+        <div className="activities-grid">
+          {activities.map((activity, index) => {
+            const Icon = activity.icon;
+            return (
+              <article
+                className="activity-card"
+                key={activity.title}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <div className="activity-image-wrap">
+                  <img src={activity.image} alt={activity.title} />
+                  <div className="activity-image-overlay">
+                    <span className="activity-icon-badge">
+                      <Icon />
+                    </span>
+                  </div>
+                </div>
 
-            <dl className="development-meta">
-              <div>
-                <dt>Resource Person</dt>
-                <dd>Mrs. Kalavathy Sanjeewakumar</dd>
-              </div>
-              <div>
-                <dt>Organization</dt>
-                <dd>Asia Chartered Institute of Digital Marketing</dd>
-              </div>
-            </dl>
-
-            <div className="achievement-badges development-skills" aria-label="Skills gained">
-              {skillsGained.map((skill) => (
-                <span key={skill}>{skill}</span>
-              ))}
-            </div>
-          </div>
-
-          <div className="development-gallery">
-            {workshopPhotos.map((photo, index) => (
-              <figure className={`development-photo photo-${index + 1}`} key={photo.src}>
-                <img src={photo.src} alt={photo.alt} />
-              </figure>
-            ))}
-          </div>
+                <div className="activity-body">
+                  <h3 className="activity-title">{activity.title}</h3>
+                  <p className="activity-description">{activity.description}</p>
+                  <p className="activity-detail">{activity.detail}</p>
+                  <div className="activity-tags">
+                    {activity.tags.map((tag) => (
+                      <span key={tag} className="activity-tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Workshops
+export default Workshops;

@@ -10,8 +10,7 @@ function Hero() {
 
           <h1>Kamshiga Ganesan</h1>
 
-          <h2>Software Engineering Undergraduate
-              Building practical web applications and backend systems.
+          <h2>Aspiring Full-Stack Developer building practical web applications and scalable backend systems.
           </h2>
 
           <p className="hero-description">
@@ -21,7 +20,7 @@ function Hero() {
           </p>
 
           <div className="hero-badges">
-            <span className="hero-badge">Software Engineering Undergraduate</span>
+            <span className="hero-badge">BSc (Hons) IT Undergraduate</span>
             <span className="hero-badge">MERN Stack Developer</span>
             <span className="hero-badge">Open to Internships</span>
           </div>
@@ -30,7 +29,7 @@ function Hero() {
             <a href="#projects" className="btn btn-primary">
               View Projects <FaArrowRight />
             </a>
-            <a href="/cv.pdf" className="btn btn-secondary" download>
+            <a href="/KamshigaGanesan_CV.pdf" className="btn btn-secondary" download>
               Download CV <FaDownload />
             </a>
           </div>
@@ -53,12 +52,12 @@ function Hero() {
 
           <div className="hero-stats">
             <div>
-              <strong>3+</strong>
+              <strong>4+</strong>
               <span>Projects Completed</span>
             </div>
             <div>
               <strong>Full-stack</strong>
-              <span>Focus area</span>
+              <span>Primary Focus</span>
             </div>
           </div>
         </div>

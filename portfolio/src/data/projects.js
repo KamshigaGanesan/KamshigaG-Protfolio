@@ -37,8 +37,15 @@ const projects = [
   {
     id: 1,
     title: 'Career Selection & Education Guidance System',
+    role: 'Full-stack feature development',
+    type: 'Academic MERN project',
     description:
-      'A MERN stack web application developed to help Sri Lankan school leavers identify suitable education and career pathways. My contribution focused on developing recommendation features, pathway comparisons, and integrating frontend and backend services.',
+      'A MERN education + career guidance app that helps school leavers compare pathways using guided recommendations.',
+
+    highlights: [
+      'Built recommendation and pathway comparison features',
+      'Integrated React screens with Express and MongoDB services',
+    ],
     tech: ['React', 'Node.js', 'Express.js', 'MongoDB'],
     github: 'https://github.com/KamshigaGanesan/A-Web-Based-Career-Selection-and-Education-Guidance-System',
     image: "/projects/career-guidance.png",
@@ -47,8 +54,15 @@ const projects = [
   {
     id: 2,
     title: 'Human Resource Management System',
+    role: 'Backend API development',
+    type: 'Spring Boot backend',
     description:
-      'A backend Human Resource Management System built using Spring Boot and PostgreSQL. Features include employee management, RESTful APIs, CRUD operations, database integration, and API testing with Postman.',
+      'A backend HR management system with clean REST APIs, relational data modeling, and employee administration workflows.',
+
+    highlights: [
+      'Created CRUD APIs for employee management workflows',
+      'Connected Spring Boot services to PostgreSQL and tested endpoints in Postman',
+    ],
     tech: ['Java', 'Spring Boot', 'PostgreSQL', 'Postman'],
     github: 'https://github.com/KamshigaGanesan/hrm-system-springboot',
     image: createProjectPreview('HRM System', 'Spring Boot'),
@@ -57,8 +71,15 @@ const projects = [
   {
     id: 3,
     title: 'Smart Campus Mobile Application',
+    role: 'Mobile module development',
+    type: 'React Native team project',
     description:
-      'A React Native mobile application developed for university students. My contribution focused on the Lost & Found Management module with API integration, MongoDB connectivity, and frontend-backend communication.',
+      'A university mobile app for student services; I owned the Lost & Found module UI and its backend API integration.',
+
+    highlights: [
+      'Developed Lost & Found screens and user flows',
+      'Connected React Native UI with Node.js, Express, and MongoDB APIs',
+    ],
     tech: ['React Native', 'Node.js', 'Express.js', 'MongoDB'],
     github: 'https://github.com/KamshigaGanesan/Y2S2SmartUniMobileApp_WMT',
     image: "/projects/smartUNI.png",
@@ -67,8 +88,15 @@ const projects = [
   {
     id: 4,
     title: 'Jewellers Website',
+    role: 'Full-stack web development',
+    type: 'Business showcase platform',
     description:
-      'A full-stack jewellery showcase platform developed for a local business. Includes product management, gold rate updates, Cloudinary image storage, responsive design, and MongoDB Atlas integration.',
+      'A responsive jewellery showcase platform for a local business to manage products, images, and daily gold-rate content.',
+
+    highlights: [
+      'Implemented product management and gold-rate update flows',
+      'Used Cloudinary and MongoDB Atlas for image and data storage',
+    ],
     tech: ['Next.js', 'React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
     github: 'https://github.com/KamshigaGanesan/Jewellery_Management',
     image: "/projects/jewellery.png",

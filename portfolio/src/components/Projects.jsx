@@ -24,8 +24,22 @@ function Projects() {
               </div>
 
               <div className="project-card-body">
+                <div className="project-meta">
+                  <span>{project.role}</span>
+                  <span>{project.type}</span>
+                </div>
+
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
+
+                <ul className="project-highlights">
+                  {project.highlights.slice(0, 2).map((highlight) => (
+                    <li key={highlight} title={highlight}>
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+
 
                 <div className="tech-stack">
                   {project.tech.map((item) => (
@@ -41,9 +55,11 @@ function Projects() {
                     target="_blank"
                     rel="noreferrer"
                     className="project-link"
+                    aria-label={`Open ${project.title} GitHub repository`}
                   >
-                    <FaGithub /> GitHub
+                    <FaGithub aria-hidden="true" /> GitHub
                   </a>
+
                 </div>
               </div>
 
