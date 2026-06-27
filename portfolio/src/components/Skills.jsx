@@ -2,9 +2,10 @@ import {
   SiGit,
   SiMongodb,
   SiNodedotjs,
-  SiReact,
 } from "react-icons/si";
 import { FaJava, FaRegLightbulb, FaUsers, FaRegClock, FaComments } from "react-icons/fa";
+import SectionHeading from "./ui/SectionHeading";
+import { StaggerContainer, StaggerItem } from "./ui/AnimateIn";
 
 const technicalSkills = [
   {
@@ -38,50 +39,58 @@ const softSkills = [
 
 function Skills() {
   return (
-    <section id="skills" className="section light-section">
+    <section id="skills" className="section" aria-labelledby="skills-heading">
       <div className="container">
-        <h2 className="section-title">Skills & Expertise</h2>
+        <SectionHeading
+          kicker="Capabilities"
+          title="Skills & Expertise"
+          subtitle="Technical foundations and professional strengths I bring to collaborative software projects."
+        />
 
         <div className="skills-layout">
           <div className="technical-skills-section">
             <h3 className="skills-subheading">Technical Skills</h3>
-            <div className="skills-grid">
-              {technicalSkills.map((skill, index) => {
+            <StaggerContainer className="skills-grid">
+              {technicalSkills.map((skill) => {
                 const Icon = skill.icon;
                 return (
-                  <article className="skill-card" key={skill.title} data-aos="zoom-in" data-aos-delay={index * 80}>
-                    <div className="skill-card-header">
-                      <span className="skill-icon">
-                        <Icon />
-                      </span>
-                      <h3>{skill.title}</h3>
-                    </div>
-                    <div className="skill-tags">
-                      {skill.items.map((item) => (
-                        <span key={item} className="skill-tag">
-                          {item}
+                  <StaggerItem key={skill.title}>
+                    <article className="skill-card glass-card">
+                      <div className="skill-card-header">
+                        <span className="skill-icon" aria-hidden="true">
+                          <Icon />
                         </span>
-                      ))}
-                    </div>
-                  </article>
+                        <h3>{skill.title}</h3>
+                      </div>
+                      <div className="skill-tags">
+                        {skill.items.map((item) => (
+                          <span key={item} className="skill-tag">
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </article>
+                  </StaggerItem>
                 );
               })}
-            </div>
+            </StaggerContainer>
           </div>
 
-          <div className="soft-skills-section" data-aos="fade-up" data-aos-delay="300">
+          <div className="soft-skills-section">
             <h3 className="skills-subheading">Soft Skills</h3>
-            <div className="soft-skills-container">
+            <StaggerContainer className="soft-skills-container" stagger={0.06}>
               {softSkills.map((skill) => {
                 const Icon = skill.icon;
                 return (
-                  <div key={skill.name} className="soft-skill-badge">
-                    <Icon className="soft-skill-icon" />
-                    <span>{skill.name}</span>
-                  </div>
+                  <StaggerItem key={skill.name}>
+                    <div className="soft-skill-badge glass-card">
+                      <Icon className="soft-skill-icon" aria-hidden="true" />
+                      <span>{skill.name}</span>
+                    </div>
+                  </StaggerItem>
                 );
               })}
-            </div>
+            </StaggerContainer>
           </div>
         </div>
       </div>

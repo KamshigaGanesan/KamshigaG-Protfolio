@@ -1,4 +1,6 @@
 import { FaUsers, FaLaptopCode } from "react-icons/fa";
+import SectionHeading from "./ui/SectionHeading";
+import { StaggerContainer, StaggerItem } from "./ui/AnimateIn";
 
 const activities = [
   {
@@ -32,50 +34,51 @@ const activities = [
 
 function Workshops() {
   return (
-    <section className="section" id="development">
+    <section className="section" id="development" aria-labelledby="development-heading">
       <div className="container">
-        <div className="section-heading">
-          <h2 className="section-title">Professional Development</h2>
-          <p className="section-subtitle">
-            Selected workshops, presentations, and learning activities that support my growth as a software engineering undergraduate.
-          </p>
-        </div>
+        <SectionHeading
+          title="Professional Development"
+          subtitle="Selected workshops, presentations, and learning activities that support my growth as a software engineering undergraduate."
+        />
 
-        <div className="activities-grid">
-          {activities.map((activity, index) => {
+        <StaggerContainer className="activities-grid" stagger={0.1}>
+          {activities.map((activity) => {
             const Icon = activity.icon;
             return (
-              <article
-                className="activity-card"
-                key={activity.title}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="activity-image-wrap">
-                  <img src={activity.image} alt={activity.title} />
-                  <div className="activity-image-overlay">
+              <StaggerItem key={activity.title}>
+                <article className="activity-card glass-card">
+                  <div className="activity-image-wrap">
+                    <img
+                      src={activity.image}
+                      alt={activity.title}
+                      loading="lazy"
+                      decoding="async"
+                      width="640"
+                      height="360"
+                    />
+                    <div className="activity-image-overlay" aria-hidden="true" />
                     <span className="activity-icon-badge">
-                      <Icon />
+                      <Icon aria-hidden="true" />
                     </span>
                   </div>
-                </div>
 
-                <div className="activity-body">
-                  <h3 className="activity-title">{activity.title}</h3>
-                  <p className="activity-description">{activity.description}</p>
-                  <p className="activity-detail">{activity.detail}</p>
-                  <div className="activity-tags">
-                    {activity.tags.map((tag) => (
-                      <span key={tag} className="activity-tag">
-                        {tag}
-                      </span>
-                    ))}
+                  <div className="activity-body">
+                    <h3 className="activity-title">{activity.title}</h3>
+                    <p className="activity-description">{activity.description}</p>
+                    <p className="activity-detail">{activity.detail}</p>
+                    <div className="activity-tags">
+                      {activity.tags.map((tag) => (
+                        <span key={tag} className="activity-tag">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

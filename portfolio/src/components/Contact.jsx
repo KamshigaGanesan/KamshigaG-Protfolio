@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { FaArrowRight, FaEnvelope, FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import SectionHeading from "./ui/SectionHeading";
+import AnimateIn from "./ui/AnimateIn";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -35,19 +37,16 @@ function Contact() {
   }
 
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section" aria-labelledby="contact-heading">
       <div className="container">
-
-        <div className="section-heading contact-heading">
-          <span className="eyebrow">Let’s connect</span>
-          <h2 className="section-title">Contact</h2>
-          <p className="section-subtitle">
-            Send a quick brief, internship invite, or collaboration idea. The form will open your email app with everything prefilled.
-          </p>
-        </div>
+        <SectionHeading
+          kicker="Let's connect"
+          title="Contact"
+          subtitle="Send a quick brief, internship invite, or collaboration idea. The form will open your email app with everything prefilled."
+        />
 
         <div className="contact-layout">
-          <div className="contact-copy" data-aos="fade-right">
+          <AnimateIn className="contact-copy glass-card" variant="fadeRight">
             <div className="contact-banner">
               <span className="contact-banner-tag">Direct contact</span>
               <h3>Fast reply, clean handoff</h3>
@@ -57,11 +56,10 @@ function Contact() {
             </div>
 
             <div className="contact-grid">
-              <a
-                href="mailto:ganesankamshiga@gmail.com"
-                className="contact-item"
-              >
-                <span className="contact-icon"><FaEnvelope /></span>
+              <a href="mailto:ganesankamshiga@gmail.com" className="contact-item">
+                <span className="contact-icon" aria-hidden="true">
+                  <FaEnvelope />
+                </span>
                 <span>
                   <strong>Email</strong>
                   <small>ganesankamshiga@gmail.com</small>
@@ -74,7 +72,9 @@ function Contact() {
                 rel="noreferrer"
                 className="contact-item"
               >
-                <span className="contact-icon"><FaGithub /></span>
+                <span className="contact-icon" aria-hidden="true">
+                  <FaGithub />
+                </span>
                 <span>
                   <strong>GitHub</strong>
                   <small>github.com/KamshigaGanesan</small>
@@ -87,7 +87,9 @@ function Contact() {
                 rel="noreferrer"
                 className="contact-item"
               >
-                <span className="contact-icon"><FaLinkedinIn /></span>
+                <span className="contact-icon" aria-hidden="true">
+                  <FaLinkedinIn />
+                </span>
                 <span>
                   <strong>LinkedIn</strong>
                   <small>linkedin.com/in/KamshigaGanesan</small>
@@ -99,75 +101,82 @@ function Contact() {
               <strong>Availability</strong>
               <p>Open to internships, freelance builds, and collaboration opportunities.</p>
             </div>
-          </div>
+          </AnimateIn>
 
-          <form className="contact-form" onSubmit={handleSubmit} data-aos="fade-left">
-            <div className="contact-form-header">
-              <span className="contact-form-kicker">Email form</span>
-              <h3>Send a concise brief</h3>
-              <p>
-                Fill this out and your email app will open with the subject and message ready to send.
-              </p>
-            </div>
+          <AnimateIn variant="fadeLeft" delay={0.08}>
+            <form className="contact-form glass-card" onSubmit={handleSubmit} noValidate>
+              <div className="contact-form-header">
+                <span className="contact-form-kicker">Email form</span>
+                <h3>Send a concise brief</h3>
+                <p>
+                  Fill this out and your email app will open with the subject and message ready to send.
+                </p>
+              </div>
 
-            <div className="contact-form-grid">
-              <label>
-                <span>Name</span>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your name"
-                />
-              </label>
+              <div className="contact-form-grid">
+                <label htmlFor="contact-name">
+                  <span>Name</span>
+                  <input
+                    id="contact-name"
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your name"
+                    autoComplete="name"
+                  />
+                </label>
 
-              <label>
-                <span>Email</span>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="you@example.com"
-                />
-              </label>
+                <label htmlFor="contact-email">
+                  <span>Email</span>
+                  <input
+                    id="contact-email"
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="you@example.com"
+                    autoComplete="email"
+                  />
+                </label>
 
-              <label className="contact-form-full">
-                <span>Subject</span>
-                <input
-                  type="text"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="Internship opportunity, project idea, or collaboration"
-                />
-              </label>
+                <label className="contact-form-full" htmlFor="contact-subject">
+                  <span>Subject</span>
+                  <input
+                    id="contact-subject"
+                    type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="Internship opportunity, project idea, or collaboration"
+                  />
+                </label>
 
-              <label className="contact-form-full">
-                <span>Message</span>
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows="6"
-                  placeholder="Share the role, timeline, stack, or next step you have in mind."
-                />
-              </label>
-            </div>
+                <label className="contact-form-full" htmlFor="contact-message">
+                  <span>Message</span>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows="6"
+                    placeholder="Share the role, timeline, stack, or next step you have in mind."
+                  />
+                </label>
+              </div>
 
-            <div className="contact-form-footer">
-              <p>Best for internships, freelance builds, and collaboration ideas.</p>
-              <button type="submit" className="btn btn-primary contact-submit">
-                Open Email <FaArrowRight />
-              </button>
-            </div>
-          </form>
+              <div className="contact-form-footer">
+                <p>Best for internships, freelance builds, and collaboration ideas.</p>
+                <button type="submit" className="btn btn-primary contact-submit">
+                  Open Email <FaArrowRight aria-hidden="true" />
+                </button>
+              </div>
+            </form>
+          </AnimateIn>
         </div>
-
       </div>
     </section>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

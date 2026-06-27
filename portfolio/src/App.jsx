@@ -1,7 +1,3 @@
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -13,28 +9,24 @@ import Workshops from "./components/Workshops";
 import Footer from "./components/Footer";
 
 function App() {
-
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      offset: 60,
-      once: true,
-    });
-  }, []);
-
   return (
     <>
+      <a href="#home" className="skip-link">
+        Skip to main content
+      </a>
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Workshops />
-      <Contact/>
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Workshops />
+        <Contact />
+      </main>
       <Footer />
     </>
-  )
+  );
 }
 
 export default App;
