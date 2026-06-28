@@ -6,17 +6,17 @@ const highlights = [
   {
     icon: FaGraduationCap,
     title: "Education",
-    detail: "BSc (Hons) IT — Software Engineering, Year 2",
+    detail: "BSc (Hons) in Information Technology\nSpecialization in Software Engineering\nSLIIT | 2024 – Present",
   },
   {
     icon: FaLaptopCode,
     title: "Specialization",
-    detail: "Full-stack development, backend APIs, and product-minded software",
+    detail: "Full-stack development, backend Systems, and product-minded software",
   },
   {
     icon: FaRocket,
     title: "Career Goal",
-    detail: "Preparing for internship opportunities in software development",
+    detail: "Seeking a Software Engineering Internship to contribute to real-world software development projects.",
   },
 ];
 
@@ -53,15 +53,14 @@ function About() {
           <AnimateIn className="about-card glass-card" variant="fadeUp" delay={0.05}>
             <p className="about-label">Focus</p>
             <p className="section-text">
-              I am a second-year BSc (Hons) Information Technology undergraduate specializing in Software Engineering, with a strong
-              interest in full-stack development, backend APIs, and product-minded software.
+              I enjoy building full-stack web and mobile applications with a strong focus on backend development, RESTful APIs, database design, and scalable software solutions. Through academic, personal, and client projects, I have developed practical experience in designing, implementing, and testing modern software applications.
             </p>
           </AnimateIn>
 
           <AnimateIn className="about-card glass-card" variant="fadeUp" delay={0.1}>
             <p className="about-label">Goal</p>
             <p className="section-text">
-              I am actively developing full-stack web applications and strengthening my software engineering skills to prepare for internship opportunities and a professional career in software development.
+              My goal is to begin my career as a Software Engineering Intern, where I can apply my technical knowledge, collaborate with experienced developers, and contribute to building reliable, user-focused software solutions while continuously expanding my software engineering expertise.
             </p>
           </AnimateIn>
         </div>

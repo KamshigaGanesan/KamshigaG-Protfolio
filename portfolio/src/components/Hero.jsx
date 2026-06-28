@@ -23,7 +23,7 @@ function Hero() {
                 View Projects <FaArrowRight aria-hidden="true" />
               </a>
 
-              <a href="/KamshigaGanesan_CV.pdf" className="btn btn-secondary" download>
+              <a href="/Kamshiga_Ganesan_CV.pdf" className="btn btn-secondary" download>
                 Download CV <FaDownload aria-hidden="true" />
               </a>
             </div>
